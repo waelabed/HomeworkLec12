@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+ @Html.BeginForm("http://localhost:37508/API/PRODUCTS/","Products", "post")
+    {
+    <input type="text" name="productName" value="" />
+    <input type="text" name="productPrice" value="" />
+
+@Html.DropDownList("categoryName", new SelectList(ViewBag.cmb_name, "categoryId", "categoryName"), "- Please select category -", new { htmlAttributes = new { @class = "form-control col-md-5", aria_describedby = "dropdownMenu1" } })
+  
+    <input type="submit" name="btnSubmit" value="" />
+    }
+ 
+
+    <h2>Index</h2>
+
